@@ -47,7 +47,7 @@ CREATE TABLE zepto (
   quantity INTEGER
 );
 
-##2. Data Import
+2.  Data Import
 Loaded CSV using pgAdmin's import feature.
 If you're not able to use the import feature, use this command instead:
 \copy zepto(category,name,mrp,discountPercent,availableQuantity,
@@ -57,7 +57,7 @@ WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
 
 
 
-##3.  Data Exploration
+3.  Data Exploration
 1.Counted the total number of records in the dataset
 2.Viewed a sample of the dataset to understand structure and content
 3.Checked for null values across all columns
@@ -65,11 +65,11 @@ WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
 5.Compared in-stock vs out-of-stock product counts
 6.Detected products present multiple times, representing different SKUs
 
-##4.  Data Cleaning
+4.  Data Cleaning
 1.Identified and removed rows where MRP or discounted selling price was zero
 2.Converted mrp and discountedSellingPrice from paise to rupees for consistency and readability
 
-##5. Business Insights
+5.  Business Insights
 1.Found top 10 best-value products based on discount percentage
 2.Identified high-MRP products that are currently out of stock
 3.Estimated potential revenue for each product category
