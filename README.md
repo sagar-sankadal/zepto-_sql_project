@@ -48,8 +48,9 @@ CREATE TABLE zepto (
 );
 
 ### 2.data import
-Loaded CSV using pgAdmin's import feature.
-If you're not able to use the import feature, use this command instead:
+
+ Loaded CSV using pgAdmin's import feature.
+ If you're not able to use the import feature, use this command instead:
 \copy zepto(category,name,mrp,discountPercent,availableQuantity,
             discountedSellingPrice,weightInGms,outOfStock,quantity)
 FROM 'data/zepto_data_kaggle.csv'
@@ -57,25 +58,28 @@ WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
 
 
 
-### 3.Data Exploration
-1.Counted the total number of records in the dataset
-2.Viewed a sample of the dataset to understand structure and content
-3.Checked for null values across all columns
-4.Identified distinct product categories available in the dataset
-5.Compared in-stock vs out-of-stock product counts
-6.Detected products present multiple times, representing different SKUs
+### 3. Data Exploration
 
-### 4.Data Cleaning
-1.Identified and removed rows where MRP or discounted selling price was zero
-2.Converted mrp and discountedSellingPrice from paise to rupees for consistency and readability
+1. Counted the total number of records in the dataset
+2. Viewed a sample of the dataset to understand structure and content
+3. Checked for null values across all columns
+4. Identified distinct product categories available in the dataset
+5. Compared in-stock vs out-of-stock product counts
+6. Detected products present multiple times, representing different SKUs
 
-### 5.Business Insights
-1.Found top 10 best-value products based on discount percentage
-2.Identified high-MRP products that are currently out of stock
-3.Estimated potential revenue for each product category
-4.Filtered expensive products (MRP > ₹500) with minimal discount
-5.Ranked top 5 categories offering highest average discounts
-6.Calculated price per gram to identify value-for-money products
-7.Grouped products based on weight into Low, Medium, and Bulk categories
-8.Measured total inventory weight per product category
+### 4. Data Cleaning
+
+1. Identified and removed rows where MRP or discounted selling price was zero
+2. Converted mrp and discountedSellingPrice from paise to rupees for consistency and readability
+
+### 5. Business Insights
+
+1. Found top 10 best-value products based on discount percentage
+2. Identified high-MRP products that are currently out of stock
+3. Estimated potential revenue for each product category
+4. Filtered expensive products (MRP > ₹500) with minimal discount
+5. Ranked top 5 categories offering highest average discounts
+6. Calculated price per gram to identify value-for-money products
+7. Grouped products based on weight into Low, Medium, and Bulk categories
+8. Measured total inventory weight per product category
 
