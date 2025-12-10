@@ -48,12 +48,14 @@ CREATE TABLE zepto (
 );
 
 ### 2.data import
+- Loaded CSV using pgAdmin's import feature.
 
-.  Loaded CSV using pgAdmin's import feature.
- . If you're not able to use the import feature, use this command instead:
-. \copy zepto(category,name,mrp,discountPercent,availableQuantity,
-            discountedSellingPrice,weightInGms,outOfStock,quantity)
-FROM 'data/zepto_data_kaggle.csv'
+- If you're not able to use the import feature, write this code instead:
+
+```sql
+\copy zepto(category,name,mrp,discountPercent,availableQuantity,
+discountedSellingPrice,weightInGms,outOfStock,quantity)
+FROM 'data/zepto_v2.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
 
 
