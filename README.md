@@ -52,8 +52,8 @@ CREATE TABLE zepto (
 
 - If you're not able to use the import feature, write this code instead:
 
-```sql
-\copy zepto(category,name,mrp,discountPercent,availableQuantity,
+
+- \copy zepto(category,name,mrp,discountPercent,availableQuantity,
 discountedSellingPrice,weightInGms,outOfStock,quantity)
 FROM 'data/zepto_v2.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
