@@ -3,19 +3,13 @@ End-to-end SQL data analytics project on Zepto product dataset using PostgreSQL 
 ## 🛒 Zepto E-commerce SQL Data Analyst Portfolio Project
 This is a complete, real-world data analyst portfolio project based on an e-commerce inventory dataset scraped from Zepto — one of India’s fastest-growing quick-commerce startups. This project simulates real analyst workflows, from raw data exploration to business-focused data analysis.
 
-# zepto-_sql_project
-End-to-end SQL data analytics project on Zepto product dataset using PostgreSQL with all business insights.
-
-## 🛒 Zepto E-commerce SQL Data Analyst Portfolio Project
-This is a complete, real-world data analyst portfolio project based on an e-commerce inventory dataset scraped from Zepto — one of India’s fastest-growing quick-commerce startups. This project simulates real analyst workflows, from raw data exploration to business-focused data analysis.
-
 ## 📌 Project Overview
 The goal is to simulate how actual data analysts in the e-commerce or retail industries work behind the scenes using SQL to:
 
-✅ Set up a messy, real-world e-commerce inventory database  
-✅ Perform Exploratory Data Analysis (EDA) to explore product categories, availability, and pricing inconsistencies  
-✅ Implement Data Cleaning to handle null values, remove invalid entries, and convert pricing from paise to rupees  
-✅ Write business-driven SQL queries to derive insights around pricing, inventory, stock availability, revenue, and more  
+1.Set up a messy, real-world e-commerce inventory database  
+2.Perform Exploratory Data Analysis (EDA) to explore product categories, availability, and pricing inconsistencies  
+3.Implement Data Cleaning to handle null values, remove invalid entries, and convert pricing from paise to rupees  
+4.Write business-driven SQL queries to derive insights around pricing, inventory, stock availability, revenue, and more  
 
 ## 📁 Dataset Overview
 The dataset was sourced from Kaggle and was originally scraped from Zepto’s official product listings. It mimics what you’d typically encounter in a real-world e-commerce inventory system.
@@ -36,7 +30,7 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 
 ## Project Workflow
 
-### 1️⃣ Database & Table Creation
+### 1 .Database & Table Creation
 We start by creating a SQL table with appropriate data types:
 
 ```sql
@@ -58,7 +52,7 @@ Loaded CSV using pgAdmin's import feature.
 If you're not able to use the import feature, use this command instead:
 \copy zepto(category,name,mrp,discountPercent,availableQuantity,
             discountedSellingPrice,weightInGms,outOfStock,quantity)
-FROM 'data/zepto_v2.csv'
+FROM 'data/zepto_data_kaggle.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
 
 
@@ -71,7 +65,7 @@ WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
 5.Compared in-stock vs out-of-stock product counts
 6.Detected products present multiple times, representing different SKUs
 
-**  Data Cleaning
+**4.  Data Cleaning
 1.Identified and removed rows where MRP or discounted selling price was zero
 2.Converted mrp and discountedSellingPrice from paise to rupees for consistency and readability
 
